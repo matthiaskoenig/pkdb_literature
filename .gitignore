@@ -23,4 +23,4 @@ __pycache__
 
 results/
 
-.api_keys
+.api_keys.txt

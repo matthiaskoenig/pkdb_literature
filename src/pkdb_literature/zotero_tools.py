@@ -36,11 +36,10 @@ custom_tag_prefixes: List[str] = [
     "timecourse:",
 ]
 
-def create_zot_client(library: str) -> zotero.Zotero:
+
+def create_zot_client(library: str, api_key: str, library_type: str = "group") -> zotero.Zotero:
     """Create zotero client for library."""
     library_id = libraries[library]["gid"]
-    library_type = "group"
-    api_key = libraries[library]["api_key"]
 
     zot = zotero.Zotero(library_id, library_type, api_key)
     return zot
@@ -107,12 +106,24 @@ def create_tag_table(items: List[Dict], tags_set: Set[str] = custom_tags, tag_pr
 
 
 if __name__ == "__main__":
-    from pkdb_literature import RESULTS_DIR
+    from pkdb_literature import RESULTS_DIR, APIKEYS_DIR
 
     # Your userID for use in API calls is 7851040
-    zot: zotero.Zotero = create_zot_client("pyzot")
-    get_items(zot, show=True, limit=1)
-    items = get_items(zot, show=False)
-    df = create_tag_table(items)
-    df.to_excel(RESULTS_DIR / "pyzot_tags.xlsx", sheet_name="tags")
+    # zot: zotero.Zotero = create_zot_client("pyzot")
+    # get_items(zot, show=True, limit=1)
+    # items = get_items(zot, show=False)
+    # df = create_tag_table(items)
+    # df.to_excel(RESULTS_DIR / "pyzot_tags.xlsx", sheet_name="tags")
+
+    # do the same for glucose-risk-score library:
+    # read api_key, FIXME: handle multiple api_keys in file
+    with open(APIKEYS_DIR) as file:
+        libraryinfo = file.readline()
+        api_key = libraryinfo.split(":")[1]
+    api_key = api_key.strip()
+
+    zot: zotero.Zotero = create_zot_client(library="glucose-risk-score", api_key=api_key)
+    eligible_items = zot.searches()
+    console.print(eligible_items)
+
 
