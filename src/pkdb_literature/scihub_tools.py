@@ -2,7 +2,7 @@
 Sci-API Unofficial API
 [Search|Download] research papers from [scholar.google.com|sci-hub.io].
 
-@author zaytoun
+@author zaytoun, matthiaskoenig
 """
 from pathlib import Path
 import rich
