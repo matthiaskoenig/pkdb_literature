@@ -9,7 +9,6 @@ cd pkdb_literature
 pip install -e .[development] --upgrade
 ```
 
-
 ## Retrieve PDFs via Sci-hub
 
 - Go to the zotero library
@@ -18,5 +17,7 @@ pip install -e .[development] --upgrade
 
 Run script from `src/pkdb_literature/scihub.tools`
 
+```
 python scihub_tools.py -f /home/mkoenig/git/pkdb_literature/dois/Ppp1r3b_dois.txt -o /home/mkoenig/git/pkdb_literature/results/Ppp1r3b
+```
 
