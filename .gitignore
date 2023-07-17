@@ -1,6 +1,7 @@
 .vscode
 *.pyc
 *~
+*.csv#
 .DS_Store
 .eggs/
 dist
