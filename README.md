@@ -13,11 +13,13 @@ pip install -e .[development] --upgrade
 
 - Go to the zotero library
 - Select items without PDF attachment
-- right click -> Export items -> `CSV` -> `<substance>.doi`
+- right click -> Export items -> `CSV` -> `<substance>.txt`
+- create DOI file with `dois_from_csv.py`
 
 Run script from `src/pkdb_literature/scihub.tools`
 
 ```
 python scihub_tools.py -f /home/mkoenig/git/pkdb_literature/dois/Ppp1r3b_dois.txt -o /home/mkoenig/git/pkdb_literature/results/Ppp1r3b
+python scihub_tools.py -f /home/mkoenig/git/pkdb_literature/dois/ethinylestradiol_dois.txt -o /home/mkoenig/git/pkdb_literature/results/ethinylestradiol
 ```
 
