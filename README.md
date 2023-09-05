@@ -21,5 +21,6 @@ Run script from `src/pkdb_literature/scihub.tools`
 ```
 python scihub_tools.py -f /home/mkoenig/git/pkdb_literature/dois/Ppp1r3b_dois.txt -o /home/mkoenig/git/pkdb_literature/results/Ppp1r3b
 python scihub_tools.py -f /home/mkoenig/git/pkdb_literature/dois/ethinylestradiol_dois.txt -o /home/mkoenig/git/pkdb_literature/results/ethinylestradiol
+python scihub_tools.py -f /home/mkoenig/git/pkdb_literature/dois/HCTZ_dois.txt -o /home/mkoenig/git/pkdb_literature/results/HCTZ
 ```
 
