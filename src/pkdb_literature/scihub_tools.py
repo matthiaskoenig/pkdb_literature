@@ -78,7 +78,7 @@ def get_pdfs_for_bib(source: Path, target_dir: Path):
                     rich.print(result)
 
 
-class SciHub(object):
+class SciHub:
     """
     SciHub class can search for papers on Google Scholars
     and fetch/download papers from sci-hub.io
