@@ -99,7 +99,7 @@ class SciHub:
         s = self._get_soup(res.content)
         for a in s.find_all('a', href=True):
             if 'sci-hub.' in a['href']:
-                if a['href'] not in [ 'https://sci-hub.tw',  'http://sci-hub.tw','https://sci-hub.shop']:
+                if a['href'] not in [ 'https://sci-hub.se', 'https://sci-hub.tw',  'http://sci-hub.tw','https://sci-hub.shop']:
                     urls.append(a['href'])
         return urls
 
