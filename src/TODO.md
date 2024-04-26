@@ -1,0 +1,4 @@
+- [ ] update script for retrieving information
+- [ ] create commands
+- [ ] create package
+- [ ] release package

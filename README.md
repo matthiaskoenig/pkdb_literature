@@ -9,13 +9,10 @@ cd pkdb_literature
 pip install -e .[development] --upgrade
 ```
 
-FIXME: update to https://pypi.org/project/scidownl/
-Resolve latest issues with certificates
-
 
 ## Retrieve PDFs via Sci-hub
 
-- Go to the zotero library
+- Open the zotero library
 - Select items without PDF attachment
 - right click -> Export items -> `CSV` -> `<substance>.txt`
 - create DOI file with `dois_from_csv.py`
