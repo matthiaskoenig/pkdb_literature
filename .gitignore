@@ -13,7 +13,6 @@ cover/
 .coverage
 coverage.xml
 .benchmark
-src/pkdb_literature/
 src/pkdb_literature.egg-info/
 
 
@@ -23,5 +22,4 @@ __pycache__
 .Rhistory
 
 results/
-
 .api_keys.txt
