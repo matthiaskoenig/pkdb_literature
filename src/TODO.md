@@ -1,4 +1,14 @@
-- [ ] update script for retrieving information
-- [ ] create commands
-- [ ] create package
+- [ ] update script for retrieving information using scidownl
+  - [ ] download via doi
+  - [ ] examples for aliskiren and dapagliflozin
+  - [ ] retrieve information from literature database;
+- [ ] create commands on command line
+  - retrieve via pmid and doi
+  
+- [ ] create package 
+    - [ ] logo
+    - [ ] tests running with tox
+    - [ ] black
+    - [ ] automatic code formating via commit hook
+    - [ ] connect script
 - [ ] release package

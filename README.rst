@@ -103,7 +103,7 @@ Retrieve PDFs via Sci-hub
 
 - Open the zotero library
 - Select items without PDF attachment
-- right click -> Export items -> `CSV` -> `<substance>.txt`
+- right click -> Export items -> CSV -> `<substance>.txt`
 - create DOI file with `dois_from_csv.py`
 
 Run script from `src/pkdb_literature/scihub.tools`::

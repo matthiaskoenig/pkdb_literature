@@ -1,3 +1,3 @@
 include LICENSE
 include README.rst
-include src/pkdb_literature/py.typed
+include src/pkpdbib/py.typed
