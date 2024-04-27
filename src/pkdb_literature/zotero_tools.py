@@ -20,29 +20,12 @@ from pyzotero import zotero
 
 from pkdb_literature.console import console
 
-libraries: Dict[str, Dict] = {
-    "pyzot": {'gid': 4979949, 'api_key': "5w2kDQMA7YfRbnyUxPdjBEgW"}, # pyzot: read/write
-    "glucose-risk-score": {'gid': 4535898, 'api_key': None}
-}
-
-custom_tags: Set[str] = {
-    'has_simulation',
-    'pkdb',
-}
-custom_tag_prefixes: List[str] = [
-    "data:",
-    "group:",
-    "species:",
-    "timecourse:",
-]
 
 
-def create_zot_client(library: str, api_key: str, library_type: str = "group") -> zotero.Zotero:
+def create_zot_client(library_id: str, api_key: str, library_type: str = "group") -> zotero.Zotero:
     """Create zotero client for library."""
-    library_id = libraries[library]["gid"]
+    return zotero.Zotero(library_id, library_type, api_key)
 
-    zot = zotero.Zotero(library_id, library_type, api_key)
-    return zot
 
 
 def get_items(zot: zotero.Zotero, show: bool = False, limit=None) -> List[Dict]:
