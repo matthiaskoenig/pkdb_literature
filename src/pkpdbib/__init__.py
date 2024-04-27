@@ -3,7 +3,7 @@
 from pathlib import Path
 
 __author__ = "Matthias König"
-__version__ = "0.0.1"
+__version__ = "0.1.0"
 
 
 program_name: str = "pkdb_literature"
