@@ -16,7 +16,7 @@
 from typing import Dict, List, Set
 
 import pandas as pd
-from pkdb_literature.console import console
+from pkpdbib.console import console
 from pyzotero import zotero
 
 

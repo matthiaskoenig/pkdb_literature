@@ -1,10 +1,8 @@
 - [ ] update script for retrieving information using scidownl
-  - [ ] download via doi (schihub)
-  - [ ] examples for aliskiren and dapagliflozin
-  - [ ] retrieve information from literature database (zotero);
-- [ ] create commands on command line
-  - retrieve via pmid and doi
+  - [ ] examples for aliskiren and dapagliflozin & add to bibliografies
+  
+  - [ ] retrieve information/dois directly from literature database (zotero);
+  
+  - [ ] add PDFs to literature database
 
-- [ ] connect release script
-- [ ] CI/CD
-- [ ] release package
+- [ ] release package 0.1.0
