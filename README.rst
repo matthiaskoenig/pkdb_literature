@@ -109,6 +109,6 @@ Retrieve PDFs via Sci-hub
 
 Run script from `src/pkdb_literature/scihub.tools`::
 
-    scihub_pdfs -s <substance>.csv
+    scihub_pdfs -z <substance>.csv
 
 © 2021-2024 Matthias König

@@ -45,13 +45,13 @@ def scihub_pdfs_from_dois(
         scihub_pdf_from_doi(doi=doi, pdf_path=pdf_path, scihub_url=scihub_url)
 
 
-def scihub_pdfs(zotero_tsv_path: Path, scihub_url: Optional[str] = None) -> None:
+def scihub_pdfs(zotero_csv_path: Path, scihub_url: Optional[str] = None) -> None:
     """Download missing pdfs for substance."""
-    console.print(zotero_tsv_path)
-    dois = dois_from_csv(csv_path=zotero_tsv_path)
+    console.print(zotero_csv_path)
+    dois = dois_from_csv(csv_path=zotero_csv_path)
     scihub_pdfs_from_dois(
         dois=dois,
-        pdf_dir=RESULTS_DIR / zotero_tsv_path.stem,
+        pdf_dir=RESULTS_DIR / zotero_csv_path.stem,
         scihub_url=scihub_url,
     )
 
