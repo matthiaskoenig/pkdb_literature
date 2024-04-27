@@ -1,8 +1,8 @@
-"""pkdb_literature - Python utilities for literature."""
+"""pkdbbib - Python utilities for PK/DB literature and bibliography."""
 
 from pathlib import Path
 
-__author__ = "Matthias Koenig"
+__author__ = "Matthias König"
 __version__ = "0.0.1"
 
 
@@ -11,4 +11,4 @@ RESOURCES_DIR: Path = Path(__file__).parent / "resources"
 
 BASE_PATH = Path(__file__).parent.parent.parent
 RESULTS_DIR: Path = BASE_PATH / "results"
-APIKEYS_DIR: Path = BASE_PATH / ".api_keys.txt"
+RESULTS_DIR.mkdir(exist_ok=True)

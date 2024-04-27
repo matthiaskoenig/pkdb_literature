@@ -104,13 +104,11 @@ Documentation
 =============
 Retrieve PDFs via Sci-hub
 
-- Open the zotero library
-- Select items without PDF attachment
-- right click -> Export items -> CSV -> `<substance>.txt`
+- Open the zotero library, select items without PDF attachment, right click -> Export items -> CSV -> <substance>.csv
 
 
 Run script from `src/pkdb_literature/scihub.tools`::
 
-    scihub_pdfs -s aliskiren
+    scihub_pdfs -s <substance>.csv
 
 © 2021-2024 Matthias König
