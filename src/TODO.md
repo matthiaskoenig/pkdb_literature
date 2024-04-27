@@ -1,14 +1,13 @@
 - [ ] update script for retrieving information using scidownl
-  - [ ] download via doi
+  - [ ] download via doi (schihub)
   - [ ] examples for aliskiren and dapagliflozin
-  - [ ] retrieve information from literature database;
+  - [ ] retrieve information from literature database (zotero);
 - [ ] create commands on command line
   - retrieve via pmid and doi
-  
-- [ ] create package 
-    - [x] logo
-    - [ ] tests running with tox
-    - [ ] black
-    - [ ] automatic code formating via commit hook
-    - [ ] connect script
+
+- [ ] zenodo integration & first release
+
+- [ ] create package
+    - [ ] connect release script
+
 - [ ] release package
