@@ -1,4 +1,5 @@
 """pkdb_literature - Python utilities for literature."""
+
 from pathlib import Path
 
 __author__ = "Matthias Koenig"

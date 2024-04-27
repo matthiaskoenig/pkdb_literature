@@ -6,7 +6,7 @@
   - retrieve via pmid and doi
   
 - [ ] create package 
-    - [ ] logo
+    - [x] logo
     - [ ] tests running with tox
     - [ ] black
     - [ ] automatic code formating via commit hook

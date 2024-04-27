@@ -1,8 +1,10 @@
 """Create DOI file from csv file."""
+
 from pathlib import Path
 
 import pandas as pd
 from console import console
+
 
 def dois_from_csv(csv_path: Path, doi_path: Path) -> None:
     """Create DOI file from csv file."""
@@ -26,5 +28,5 @@ if __name__ == "__main__":
 
     dois_from_csv(
         csv_path=BASE_PATH / "dois" / f"{substance}.csv",
-        doi_path=BASE_PATH / "dois" / f"{substance}_dois.txt"
+        doi_path=BASE_PATH / "dois" / f"{substance}_dois.txt",
     )

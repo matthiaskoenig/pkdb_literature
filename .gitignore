@@ -13,7 +13,8 @@ cover/
 .coverage
 coverage.xml
 .benchmark
-src/pkdb_literature.egg-info/
+src/pkpdbib.egg-info/
+
 
 
 wheels

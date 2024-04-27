@@ -2,11 +2,11 @@
 
 Using rich for output formating.
 """
+
 import logging
 
-from rich.logging import RichHandler
-
 from pkdb_literature.console import console
+from rich.logging import RichHandler
 
 
 def get_logger(name: str, level: int = logging.INFO) -> logging.Logger:

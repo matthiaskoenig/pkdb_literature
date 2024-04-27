@@ -113,6 +113,5 @@ Run script from `src/pkdb_literature/scihub.tools`::
     python scihub_tools.py -f /home/mkoenig/git/pkdb_literature/dois/ethinylestradiol_dois.txt -o /home/mkoenig/git/pkdb_literature/results/ethinylestradiol
     python scihub_tools.py -f /home/mkoenig/git/pkdb_literature/dois/HCTZ_dois.txt -o /home/mkoenig/git/pkdb_literature/results/HCTZ
     python scihub_tools.py -f /home/mkoenig/git/pkdb_literature/dois/aliskiren_dois.txt -o /home/mkoenig/git/pkdb_literature/results/aliskiren
-```
 
 © 2021-2024 Matthias König

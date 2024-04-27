@@ -12,30 +12,29 @@
     The ID is the integer after /groups/
 
 """
+
 from typing import Dict, List, Set
 
 import pandas as pd
+from pkdb_literature.console import console
 from pyzotero import zotero
 
 
-from pkdb_literature.console import console
-
-
-
-def create_zot_client(library_id: str, api_key: str, library_type: str = "group") -> zotero.Zotero:
+def create_zot_client(
+    library_id: str, api_key: str, library_type: str = "group"
+) -> zotero.Zotero:
     """Create zotero client for library."""
     return zotero.Zotero(library_id, library_type, api_key)
-
 
 
 def get_items(zot: zotero.Zotero, show: bool = False, limit=None) -> List[Dict]:
     """List items for library."""
 
-    '''
+    """
     A Zotero instance is bound to the library or group used to create it.
     Thus, if you create a Zotero instance with a library_id of 67 and a
     library_type of group, its item methods will only operate upon that group.
-    '''
+    """
     if limit:
         items = zot.top(limit=limit)  # top level items
     else:
@@ -44,25 +43,29 @@ def get_items(zot: zotero.Zotero, show: bool = False, limit=None) -> List[Dict]:
     if show:
         for k, item in enumerate(items):
             console.rule(title=f"Item {k+1}", align="left", style="white")
-            #console.print(item['data'])
-            #console.print()
+            # console.print(item['data'])
+            # console.print()
             console.print(item)
     return items
 
 
-def create_tag_table(items: List[Dict], tags_set: Set[str] = custom_tags, tag_prefixes: List[str] = custom_tag_prefixes) -> pd.DataFrame:
+def create_tag_table(
+    items: List[Dict],
+    tags_set: Set[str] = custom_tags,
+    tag_prefixes: List[str] = custom_tag_prefixes,
+) -> pd.DataFrame:
     """Creates a table with tag columns."""
 
     metadata: List[Dict] = []
 
     for k, item in enumerate(items):
         key = item["key"]
-        data = item['data']
+        data = item["data"]
 
         md = {
-            'key': key,
-            'doi': data["DOI"],
-            'pubmed': None,
+            "key": key,
+            "doi": data["DOI"],
+            "pubmed": None,
         }
         # 'extra': 'PMID: 27267043 \nPMCID: PMC4895977',
 
@@ -89,7 +92,7 @@ def create_tag_table(items: List[Dict], tags_set: Set[str] = custom_tags, tag_pr
 
 
 if __name__ == "__main__":
-    from pkdb_literature import RESULTS_DIR, APIKEYS_DIR
+    from pkdb_literature import APIKEYS_DIR, RESULTS_DIR
 
     # Your userID for use in API calls is 7851040
     # zot: zotero.Zotero = create_zot_client("pyzot")
@@ -97,7 +100,6 @@ if __name__ == "__main__":
     # items = get_items(zot, show=False)
     # df = create_tag_table(items)
     # df.to_excel(RESULTS_DIR / "pyzot_tags.xlsx", sheet_name="tags")
-
     # do the same for glucose-risk-score library:
     # read api_key, FIXME: handle multiple api_keys in file
     with open(APIKEYS_DIR) as file:
@@ -105,8 +107,8 @@ if __name__ == "__main__":
         api_key = libraryinfo.split(":")[1]
     api_key = api_key.strip()
 
-    zot: zotero.Zotero = create_zot_client(library="glucose-risk-score", api_key=api_key)
+    zot: zotero.Zotero = create_zot_client(
+        library="glucose-risk-score", api_key=api_key
+    )
     eligible_items = zot.searches()
     console.print(eligible_items)
-
-

@@ -1,6 +1,6 @@
 # format code
-isort src/pkdb_literature
-black src/pkdb_literature
+isort src/pkpdbib
+black src/pkpdbib
 
 isort tests
 black tests
