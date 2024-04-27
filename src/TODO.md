@@ -5,9 +5,6 @@
 - [ ] create commands on command line
   - retrieve via pmid and doi
 
-- [ ] zenodo integration & first release
-
-- [ ] create package
-    - [ ] connect release script
-
+- [ ] connect release script
+- [ ] CI/CD
 - [ ] release package

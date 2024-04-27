@@ -19,8 +19,8 @@ pkpdbib: python utilities for metadata and COMBINE archives
 .. |icon4| image:: https://img.shields.io/pypi/l/pkpdbib.svg
    :target: http://opensource.org/licenses/LGPL-3.0
    :alt: GNU Lesser General Public License 3
-.. |icon5| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5308801.svg
-   :target: https://doi.org/10.5281/zenodo.5308801
+.. |icon5| image:: https://zenodo.org/badge/10.5281/zenodo.11076700.svg
+   :target: https://doi.org/10.5281/zenodo.11076700
    :alt: Zenodo DOI
 .. |icon6| image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :target: https://github.com/ambv/black
@@ -38,8 +38,8 @@ If you have any questions or issues please `open an issue <https://github.com/ma
 How to cite
 ===========
 
-.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5308801.svg
-   :target: https://doi.org/10.5281/zenodo.5308801
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.11076700.svg
+   :target: https://doi.org/10.5281/zenodo.11076700
    :alt: Zenodo DOI
 
 Contributing
