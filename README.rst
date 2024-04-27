@@ -1,22 +1,22 @@
-.. image:: https://github.com/matthiaskoenig/pymetadata/raw/develop/docs/images/favicon/pymetadata-100x100-300dpi.png
+.. image:: https://github.com/matthiaskoenig/pkpdbib/raw/develop/docs/images/favicon/pkpdbib-100x100-300dpi.png
    :align: left
-   :alt: pymetadata logo
+   :alt: pkpdbib logo
 
-pymetadata: python utilities for metadata and COMBINE archives
+pkpdbib: python utilities for metadata and COMBINE archives
 ==============================================================
 |icon1| |icon2| |icon3| |icon4| |icon5| |icon6| |icon7|
 
 
-.. |icon1| image:: https://github.com/matthiaskoenig/pymetadata/workflows/CI-CD/badge.svg
-   :target: https://github.com/matthiaskoenig/pymetadata/workflows/CI-CD
+.. |icon1| image:: https://github.com/matthiaskoenig/pkpdbib/workflows/CI-CD/badge.svg
+   :target: https://github.com/matthiaskoenig/pkpdbib/workflows/CI-CD
    :alt: GitHub Actions CI/CD Status
-.. |icon2| image:: https://img.shields.io/pypi/v/pymetadata.svg
-   :target: https://pypi.org/project/pymetadata/
+.. |icon2| image:: https://img.shields.io/pypi/v/pkpdbib.svg
+   :target: https://pypi.org/project/pkpdbib/
    :alt: Current PyPI Version
-.. |icon3| image:: https://img.shields.io/pypi/pyversions/pymetadata.svg
-   :target: https://pypi.org/project/pymetadata/
+.. |icon3| image:: https://img.shields.io/pypi/pyversions/pkpdbib.svg
+   :target: https://pypi.org/project/pkpdbib/
    :alt: Supported Python Versions
-.. |icon4| image:: https://img.shields.io/pypi/l/pymetadata.svg
+.. |icon4| image:: https://img.shields.io/pypi/l/pkpdbib.svg
    :target: http://opensource.org/licenses/LGPL-3.0
    :alt: GNU Lesser General Public License 3
 .. |icon5| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5308801.svg
@@ -29,22 +29,11 @@ pymetadata: python utilities for metadata and COMBINE archives
    :target: http://mypy-lang.org/
    :alt: mypy
 
-pymetadata is a collection of python utilities for working with
-metadata in the context of COMBINE standards with source code available from 
-`https://github.com/matthiaskoenig/pymetadata <https://github.com/matthiaskoenig/pymetadata>`__.
-
-Features include among others
-
-- COMBINE archive version 1 support (OMEX)
-- annotation classes and helpers
-- SBO and KISAO ontology enums
+pkpdbib is a collection of python utilities for working with
+pharmacokinetics/pharmacodynamics (PK/PD) literature with source code available from 
+`https://github.com/matthiaskoenig/pkpdbib <https://github.com/matthiaskoenig/pkpdbib>`__.
  
-If you have any questions or issues please `open an issue <https://github.com/matthiaskoenig/pymetadata/issues>`__.
-
-Documentation
-=============
-Documentation is still work in progress. For an example usage of the COMBINE archive
-see `src/pymetadata/examples/omex_example.py <src/pymetadata/examples/omex_example.py>`__.
+If you have any questions or issues please `open an issue <https://github.com/matthiaskoenig/pkpdbib/issues>`__.
 
 How to cite
 ===========
@@ -56,9 +45,7 @@ How to cite
 Contributing
 ============
 
-Contributions are always welcome! Please read the `contributing guidelines
-<https://github.com/matthiaskoenig/pymetadata/blob/develop/.github/CONTRIBUTING.rst>`__ to
-get started.
+Contributions are always welcome!
 
 License
 =======
@@ -66,7 +53,7 @@ License
 * Source Code: `LGPLv3 <http://opensource.org/licenses/LGPL-3.0>`__
 * Documentation: `CC BY-SA 4.0 <http://creativecommons.org/licenses/by-sa/4.0/>`__
 
-The pymetadata source is released under both the GPL and LGPL licenses version 2 or
+The pkpdbib source is released under both the GPL and LGPL licenses version 2 or
 later. You may choose which license you choose to use the software under.
 
 This program is free software: you can redistribute it and/or modify it under
@@ -88,25 +75,44 @@ A Systems Medicine Approach)" by grant number 436883643 and by grant number 4651
 
 Installation
 ============
-`pymetadata` is available from `pypi <https://pypi.python.org/pypi/pymetadata>`__ and 
+`pkpdbib` is available from `pypi <https://pypi.python.org/pypi/pkpdbib>`__ and 
 can be installed via:: 
 
-    pip install pymetadata
+    pip install pkpdbib
 
 Develop version
 ---------------
 The latest develop version can be installed via::
 
-    pip install git+https://github.com/matthiaskoenig/pymetadata.git@develop
+    pip install git+https://github.com/matthiaskoenig/pkpdbib.git@develop
 
 Or via cloning the repository and installing via::
 
-    git clone https://github.com/matthiaskoenig/pymetadata.git
-    cd pymetadata
+    git clone https://github.com/matthiaskoenig/pkpdbib.git
+    cd pkpdbib
     pip install -e .
 
 To install for development use::
 
     pip install -e .[development]
+
+
+Documentation
+=============
+Retrieve PDFs via Sci-hub
+
+- Open the zotero library
+- Select items without PDF attachment
+- right click -> Export items -> `CSV` -> `<substance>.txt`
+- create DOI file with `dois_from_csv.py`
+
+Run script from `src/pkdb_literature/scihub.tools`::
+
+    python scihub_tools.py -f /home/mkoenig/git/pkdb_literature/dois/enalapril_dois.txt -o /home/mkoenig/git/pkdb_literature/results/enalapril
+    python scihub_tools.py -f /home/mkoenig/git/pkdb_literature/dois/Ppp1r3b_dois.txt -o /home/mkoenig/git/pkdb_literature/results/Ppp1r3b
+    python scihub_tools.py -f /home/mkoenig/git/pkdb_literature/dois/ethinylestradiol_dois.txt -o /home/mkoenig/git/pkdb_literature/results/ethinylestradiol
+    python scihub_tools.py -f /home/mkoenig/git/pkdb_literature/dois/HCTZ_dois.txt -o /home/mkoenig/git/pkdb_literature/results/HCTZ
+    python scihub_tools.py -f /home/mkoenig/git/pkdb_literature/dois/aliskiren_dois.txt -o /home/mkoenig/git/pkdb_literature/results/aliskiren
+```
 
 © 2021-2024 Matthias König
